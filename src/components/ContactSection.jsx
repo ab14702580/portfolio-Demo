@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import SplitText from "@/components/SplitText";
+import BlurText from "@/components/BlurText";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -28,11 +30,11 @@ export default function ContactSection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Let&apos;s Work Together
+              <SplitText text="Let's Work Together" />
             </h2>
 
             <p className="text-slate-600 dark:text-slate-400 text-base max-w-lg leading-relaxed">
-              Have a project in mind or just want to say hello? I&apos;d love to hear from you.
+              <BlurText text="Have a project in mind or just want to say hello? I'd love to hear from you." />
             </p>
 
             <div className="flex flex-wrap items-center gap-6 pt-4">

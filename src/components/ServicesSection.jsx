@@ -1,7 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import { Monitor, LayoutTemplate, ShieldAlert, ShieldCheck } from "lucide-react";
+import SplitText from "@/components/SplitText";
+import BlurText from "@/components/BlurText";
 
 export default function ServicesSection() {
+  const [cardsInView, setCardsInView] = useState(false);
+  const cardsRef = useRef(null);
+
+  useEffect(() => {
+    const currentEl = cardsRef.current;
+    if (!currentEl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setCardsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(currentEl);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const services = [
     {
       title: "Web Development",
@@ -37,18 +65,24 @@ export default function ServicesSection() {
             My Services
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            What I Offer
+            <SplitText text="What I Offer" />
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
-            I provide modern web solutions to help your business stand out and grow online.
+            <BlurText text="I provide modern web solutions to help your business stand out and grow online." />
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 shadow-xs hover:border-[#00B67A]/50 dark:hover:border-[#00B67A]/60 hover:shadow-md transition-all duration-200 flex flex-col justify-between cursor-pointer group"
+              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 shadow-xs hover:border-[#00B67A]/50 dark:hover:border-[#00B67A]/60 hover:shadow-md transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between cursor-pointer group transform-gpu will-change-[transform,opacity,filter]"
+              style={{
+                filter: cardsInView ? "blur(0px)" : "blur(12px)",
+                opacity: cardsInView ? 1 : 0,
+                transform: cardsInView ? "translateY(0px)" : "translateY(24px)",
+                transitionDelay: `${index * 100}ms`,
+              }}
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#ECFDF5] dark:bg-[#00B67A]/20 border border-[#D1FAE5] dark:border-[#00B67A]/30 flex items-center justify-center mb-4 group-hover:bg-[#DCFCE7] dark:group-hover:bg-[#00B67A]/30 transition-colors cursor-pointer">

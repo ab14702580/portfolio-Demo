@@ -3,6 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink, Code2, X } from "lucide-react";
+import {
+  SiMongodb,
+  SiExpress,
+  SiReact,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import SplitText from "@/components/SplitText";
 import BlurText from "@/components/BlurText";
 import CircularCarousel from "@/components/CircularCarousel";
@@ -246,6 +254,38 @@ export default function ProjectsSection() {
                     delay={8}
                     duration={0.25}
                   />
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+                    Technologies
+                  </span>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+                      <SiMongodb className="w-3.5 h-3.5 text-[#47A248]" />
+                      <span>MongoDB</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 text-xs font-semibold">
+                      <SiExpress className="w-3.5 h-3.5 text-slate-800 dark:text-white" />
+                      <span>Express.js</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-50 dark:bg-sky-950/40 border border-sky-200/60 dark:border-sky-800/60 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+                      <SiReact className="w-3.5 h-3.5 text-[#61DAFB]" />
+                      <span>React</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-green-50 dark:bg-green-950/40 border border-green-200/60 dark:border-green-800/60 text-green-700 dark:text-green-300 text-xs font-semibold">
+                      <SiNodedotjs className="w-3.5 h-3.5 text-[#339933]" />
+                      <span>Node.js</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-slate-800 dark:text-white text-xs font-semibold">
+                      <SiNextdotjs className="w-3.5 h-3.5 text-black dark:text-white" />
+                      <span>Next.js</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200/60 dark:border-cyan-800/60 text-cyan-700 dark:text-cyan-300 text-xs font-semibold">
+                      <SiTailwindcss className="w-3.5 h-3.5 text-[#06B6D4]" />
+                      <span>Tailwind CSS</span>
+                    </span>
+                  </div>
                 </div>
               </div>
 

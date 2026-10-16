@@ -18,8 +18,8 @@ const rotateY = ([x, y, z], deg) => {
   const s = Math.sin(rad);
   return [x * c + z * s, y, -x * s + z * c];
 };
-const TILES = 4;
-const OVERLAP = 2.5;
+const TILES = 2;
+const OVERLAP = 1;
 
 export default function CircularCarousel({
   items = [],
@@ -390,13 +390,12 @@ export default function CircularCarousel({
           style={{
             height: cardH,
             borderRadius: frameRadius,
-            transform: inView ? "translate3d(0, 0, 0)" : "translate3d(0, 90px, 0)",
+            transform: inView ? "translate3d(0, 0, 0)" : "translate3d(0, 50px, 0)",
             opacity: inView ? 1 : 0,
-            filter: entered ? "none" : (inView ? "blur(0px)" : "blur(16px)"),
-            transitionProperty: entered ? "none" : "transform, opacity, filter",
-            transitionDuration: entered ? "0s" : "0.7s",
+            transitionProperty: entered ? "none" : "transform, opacity",
+            transitionDuration: entered ? "0s" : "0.55s",
             transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-            transitionDelay: entered ? "0ms" : `${index * 60}ms`,
+            transitionDelay: entered ? "0ms" : `${Math.min(index * 40, 400)}ms`,
           }}
         >
           <div className="absolute inset-0 pointer-events-none" style={photoStyle}>

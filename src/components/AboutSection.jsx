@@ -26,7 +26,7 @@ export default function AboutSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
 
     observer.observe(currentEl);
@@ -47,7 +47,7 @@ export default function AboutSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.05 }
     );
 
     observer.observe(currentEl);
@@ -80,7 +80,6 @@ export default function AboutSection() {
 
             <div
               ref={cardsRef}
-              key={`info-cards-${resolvedTheme || "default"}`}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2"
               style={{ perspective: "1000px" }}
             >
@@ -157,7 +156,6 @@ export default function AboutSection() {
             </div>
 
             <div
-              key={`about-btn-${resolvedTheme || "default"}`}
               className="pt-2"
               style={{ perspective: "1000px" }}
             >

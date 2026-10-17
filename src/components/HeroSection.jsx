@@ -8,8 +8,7 @@ import {
   FaGithub,
   FaLinkedinIn,
   FaXTwitter,
-  FaFacebookF,
-  FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa6";
 
 import { useTheme } from "next-themes";
@@ -21,7 +20,7 @@ export default function HeroSection() {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/ab14702580",
       icon: <FaGithub className="w-5 h-5 text-slate-700 dark:text-slate-300" />,
     },
     {
@@ -35,14 +34,9 @@ export default function HeroSection() {
       icon: <FaXTwitter className="w-4 h-4 text-slate-700 dark:text-slate-300" />,
     },
     {
-      name: "Facebook",
-      href: "https://facebook.com",
-      icon: <FaFacebookF className="w-4 h-4 text-slate-700 dark:text-slate-300" />,
-    },
-    {
-      name: "YouTube",
-      href: "https://youtube.com",
-      icon: <FaYoutube className="w-5 h-5 text-slate-700 dark:text-slate-300" />,
+      name: "WhatsApp",
+      href: "https://api.whatsapp.com/send?phone=%2B8801984301320",
+      icon: <FaWhatsapp className="w-5 h-5 text-slate-700 dark:text-slate-300" />,
     },
   ];
 

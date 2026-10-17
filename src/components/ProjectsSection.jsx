@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ExternalLink, Code2, X } from "lucide-react";
+import { ExternalLink, Code2, Server, X } from "lucide-react";
 import {
   SiMongodb,
   SiExpress,
@@ -43,32 +43,38 @@ export default function ProjectsSection() {
 
   const projects = [
     {
+      src: "/etutor.png",
+      title: "eTutor",
+      subtitle: "Online Tutoring & Subject Mentorship Platform",
+      description: "Interactive tutoring platform connecting students with expert private tutors for personalized one-on-one sessions, subject exploration, and seamless learning management.",
+      preview: "https://etutor-beta.vercel.app/",
+      frontendCode: "https://github.com/ab14702580/etutor",
+      serverCode: "https://github.com/ab14702580/etutor-server",
+    },
+    {
+      src: "/bill-management.png",
+      title: "UtilityBill",
+      subtitle: "Smart Utility Bill Tracking & Management System",
+      description: "Comprehensive financial utility bill portal enabling 24/7 access to add, organize, categorize, calculate, and securely manage household and business bills with ease.",
+      preview: "https://bill-management-orcin.vercel.app/",
+      frontendCode: "https://github.com/ab14702580/bill-management-",
+      serverCode: "https://github.com/ab14702580/bill-management",
+    },
+    {
       src: "/zorvique.png",
       title: "Zorvique",
       subtitle: "Modern Digital Solution & Web App",
+      description: "A fast, scalable digital showcase built with high-performance rendering, responsive layouts, modern interactive controls, and clean architecture.",
       preview: "https://zorvique.vercel.app/",
-      code: "https://github.com/ab14702580/Zorvique",
+      frontendCode: "https://github.com/ab14702580/Zorvique",
     },
     {
       src: "/wonderly.png",
       title: "Wanderly",
       subtitle: "Tourist Booking & Exploration Platform",
+      description: "A complete travel guide and tourist booking experience offering destination discovery, customized packages, and real-time reservation capabilities.",
       preview: "https://wanderly-tourist.vercel.app/",
-      code: "https://github.com/ab14702580/tourist-frontent",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
-      title: "Travel & Tourism",
-      subtitle: "Booking & Trip Planner Solution",
-      preview: "https://wanderly-tourist.vercel.app/",
-      code: "https://github.com/ab14702580/tourist-frontent",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-      title: "Portfolio Website",
-      subtitle: "Modern Responsive Showcase",
-      preview: "https://github.com",
-      code: "https://github.com",
+      frontendCode: "https://github.com/ab14702580/tourist-frontent",
     },
     {
       src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
@@ -249,7 +255,7 @@ export default function ProjectsSection() {
                 <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 sm:mt-3 leading-relaxed">
                   <SplitText
                     key={`modal-desc-${selectedProject.title}`}
-                    text="Developed with clean, modular architecture using modern full-stack web technologies. Features responsive layouts, optimized performance, and seamless user experiences."
+                    text={selectedProject.description || "Developed with clean, modular architecture using modern full-stack web technologies. Features responsive layouts, optimized performance, and seamless user experiences."}
                     inView={modalTextReady}
                     delay={8}
                     duration={0.25}
@@ -290,7 +296,7 @@ export default function ProjectsSection() {
               </div>
 
               <div
-                className={`flex flex-wrap items-center gap-2.5 sm:gap-4 pt-3 sm:pt-4 border-t border-slate-100 dark:border-slate-800 transition-all duration-500 ${
+                className={`flex flex-wrap items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-slate-100 dark:border-slate-800 transition-all duration-500 ${
                   modalTextReady
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-3 pointer-events-none"
@@ -300,20 +306,31 @@ export default function ProjectsSection() {
                   href={selectedProject.preview || selectedProject.link || "https://github.com"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-[#00A876] hover:bg-[#009367] text-white text-xs sm:text-sm font-bold transition-all shadow-md hover:shadow-lg cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-[#00A876] hover:bg-[#009367] text-white text-xs sm:text-sm font-bold transition-all shadow-md hover:shadow-lg cursor-pointer"
                 >
-                  <span>Live Preview</span>
                   <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>Live Preview</span>
                 </a>
                 <a
-                  href={selectedProject.code || selectedProject.link || "https://github.com"}
+                  href={selectedProject.frontendCode || selectedProject.code || selectedProject.link || "https://github.com"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-bold transition-colors cursor-pointer border border-slate-200/80 dark:border-slate-700"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-bold transition-colors cursor-pointer border border-slate-200/80 dark:border-slate-700"
                 >
                   <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  <span>View Code</span>
+                  <span>Frontend Code</span>
                 </a>
+                {selectedProject.serverCode && (
+                  <a
+                    href={selectedProject.serverCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-bold transition-colors cursor-pointer border border-slate-200/80 dark:border-slate-700"
+                  >
+                    <Server className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <span>Server Code</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>

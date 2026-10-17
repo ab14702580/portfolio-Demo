@@ -105,7 +105,10 @@ export default function HeroSection() {
                 style={{ "--fold-duration": "0.6s", "--fold-delay": "0.25s" }}
               >
                 <a
-                  href="#"
+                  href="/CV.pdf"
+                  download="CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 hover:bg-emerald-50/50 dark:hover:bg-slate-800 text-[#00A876] border-2 border-[#00A876] px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
                 >
                   <span>Download CV</span>

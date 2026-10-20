@@ -76,12 +76,11 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 shadow-xs hover:border-[#00B67A]/50 dark:hover:border-[#00B67A]/60 hover:shadow-md transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between cursor-pointer group transform-gpu will-change-[transform,opacity,filter]"
+              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-6 shadow-xs hover:border-[#00B67A]/50 dark:hover:border-[#00B67A]/60 hover:shadow-md transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between cursor-pointer group transform-gpu will-change-[transform,opacity]"
               style={{
-                filter: cardsInView ? "blur(0px)" : "blur(12px)",
                 opacity: cardsInView ? 1 : 0,
-                transform: cardsInView ? "translateY(0px)" : "translateY(24px)",
-                transitionDelay: `${index * 100}ms`,
+                transform: cardsInView ? "translate3d(0, 0, 0)" : "translate3d(0, 20px, 0)",
+                transitionDelay: `${index * 80}ms`,
               }}
             >
               <div>

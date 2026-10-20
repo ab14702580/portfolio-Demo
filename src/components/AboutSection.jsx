@@ -26,7 +26,7 @@ export default function AboutSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.05 }
+      { threshold: 0.05, rootMargin: "0px 0px -20px 0px" }
     );
 
     observer.observe(currentEl);
@@ -47,7 +47,7 @@ export default function AboutSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.05 }
+      { threshold: 0.05, rootMargin: "0px 0px -20px 0px" }
     );
 
     observer.observe(currentEl);

@@ -45,11 +45,10 @@ export default function BlurText({
         return (
           <span
             key={index}
-            className="inline-block mr-1.5 transition-all ease-[cubic-bezier(0.16,1,0.3,1)]"
+            className="inline-block mr-1.5 transition-all ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu"
             style={{
-              filter: inView ? "blur(0px)" : "blur(10px)",
               opacity: inView ? 1 : 0,
-              transform: inView ? "translateY(0)" : "translateY(16px)",
+              transform: inView ? "translate3d(0, 0, 0)" : "translate3d(0, 14px, 0)",
               transitionDuration: `${duration}s`,
               transitionDelay: wordDelay,
             }}

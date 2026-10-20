@@ -77,10 +77,12 @@ export default function ProjectsSection() {
       frontendCode: "https://github.com/ab14702580/tourist-frontent",
     },
     {
-      src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
-      title: "SaaS Analytics Dashboard",
-      subtitle: "Real-time Metrics & KPI Insights",
-      link: "https://github.com",
+      src: "/furniture-landingPage.png",
+      title: "Aurevian",
+      subtitle: "Luxury Living & Furniture Landing Page",
+      description: "An elegant, modern luxury furniture showcase featuring timeless designs, premium collections, interactive room previews, and an ultra-responsive shopping experience.",
+      preview: "https://aurevian-beta.vercel.app/",
+      frontendCode: "https://github.com/ab14702580/furniture-landing-page",
     },
     {
       src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",

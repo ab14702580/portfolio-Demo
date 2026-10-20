@@ -97,7 +97,7 @@ export default function SkillsSection() {
             return (
               <div
                 key={skill.name}
-                className="absolute pointer-events-auto transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                className="absolute pointer-events-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu will-change-[transform,opacity]"
                 style={{
                   left: inView
                     ? `calc(50% + calc(var(${diameterVar}) / 2 * ${cos}))`
@@ -105,9 +105,8 @@ export default function SkillsSection() {
                   top: inView
                     ? `calc(50% + calc(var(${diameterVar}) / 2 * ${sin}))`
                     : "50%",
-                  transform: "translate(-50%, -50%)",
+                  transform: "translate3d(-50%, -50%, 0)",
                   opacity: inView ? 1 : 0,
-                  filter: inView ? "blur(0px)" : "blur(12px)",
                   transitionDelay: delay,
                 }}
               >

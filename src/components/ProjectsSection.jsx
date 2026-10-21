@@ -85,10 +85,12 @@ export default function ProjectsSection() {
       frontendCode: "https://github.com/ab14702580/furniture-landing-page",
     },
     {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-      title: "Team Collaboration Workspace",
-      subtitle: "Agile Task Board & Chat System",
-      link: "https://github.com",
+      src: "/kids-facility.png",
+      title: "Hero Kidz",
+      subtitle: "Premium Kids & Baby Products E-Commerce",
+      description: "A playful, modern e-commerce platform for safe and educational kids toys, clothes, and accessories with dynamic shopping cart, intuitive catalog browsing, and seamless checkout.",
+      preview: "https://kids-facility.vercel.app/",
+      frontendCode: "https://github.com/abdullahfahad-dev/kids-facility",
     },
     {
       src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",

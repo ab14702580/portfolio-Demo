@@ -93,10 +93,12 @@ export default function ProjectsSection() {
       frontendCode: "https://github.com/abdullahfahad-dev/kids-facility",
     },
     {
-      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-      title: "Healthcare Portal",
-      subtitle: "Doctor Appointments & Telemedicine",
-      link: "https://github.com",
+      src: "/ai-Project.png",
+      title: "Neura AI",
+      subtitle: "AI SaaS & Machine Learning Landing Platform",
+      description: "A futuristic AI SaaS showcase highlighting cutting-edge machine learning solutions, intelligent prompt workflows, multi-tier pricing, and interactive service modules.",
+      preview: "https://abdullahfahad-dev.github.io/AI-project/",
+      frontendCode: "https://github.com/abdullahfahad-dev/AI-project",
     },
     {
       src: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
